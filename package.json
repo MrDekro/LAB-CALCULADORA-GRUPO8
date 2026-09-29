@@ -1,0 +1,15 @@
+{
+  "name": "minicajero",
+  "version": "1.0.0",
+  "description": "* Nicolas David Peñuela Arango\r * Alexandra Del Valle\r * Leoneider Gonzalez Rodriguez",
+  "main": "calculadora.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
