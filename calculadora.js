@@ -1,15 +1,14 @@
 const prompt  = require('prompt-sync')();
 
-
-let numero1 = prompt(" ingrese el primer numero: ");
-
-let numero2 = prompt(" ingrese el segundo numero: ");
-
 let resultado;
 
+let opcion;
 
-while (opcion != 'c'){
+while (opcion != "c"){
 let opcion = prompt("\nPresione 1 para multplicar \nPresione 2 para sumar\nPresione 3 para restar\nPresione 4 para dividir o C para salir\nOpcion :");
+if(opcion == "c"){
+    break;
+}
 let numero1 = prompt(" ingrese el primer numero: ");
 
 let numero2 = prompt(" ingrese el segundo numero: ");
@@ -31,9 +30,10 @@ else if(opcion == 3){
 else if(opcion == 4){
     operacion ='/'
     resultado = Number(numero1) / Number(numero2);
-    console.log(`El resultado de la operacion + es ${resultado}`);
+    console.log(`El resultado de la operacion / es ${resultado}`);
 }else{
     console.log("Operacion no valida :/");
+    break;
 }
 
 
