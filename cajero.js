@@ -4,8 +4,10 @@ let resultado;
 
 let opcion = '';
 
-while (true){
- opcion = prompt("\nPresione 1 para multplicar \nPresione 2 para sumar\nPresione 3 para restar\nPresione 4 para dividir o C para salir\nOpcion : ");
+let activo = true;
+
+while (activo == true){
+ opcion = prompt(" Presione 1 para multplicar  Presione 2 para sumar Presione 3 para restar Presione 4 para dividir o C para salir Opcion : ");
 if(opcion == "c"){
     break;
 }
@@ -37,8 +39,9 @@ else if(opcion == '4'){
     console.log(`El resultado de la operacion ${operacion} es ${resultado}`);}
 }else{
     console.log("Operacion no valida :/");
-    break;
+    activo = false;
 }
 
 
 }
+console.log(" Sesión cerrada correctamente ✔. Te esperamos muy pronto");
