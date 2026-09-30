@@ -7,17 +7,17 @@ function pedirNumero(mensaje = "Ingrese un numero: ") {
 
 function calcular(numero1, operacion,numero2) {
 
-if(operacion = '*'){
+if(operacion == "*"){
 
     return Number(numero1) * Number(numero2);
 }
-else if(operacion = '+'){
+else if(operacion == "+"){
      return Number(numero1) + Number(numero2);
 }
-else if( operacion = '-'){
+else if( operacion == "-"){
     return Number(numero1) - Number(numero2);
 }
-else if(operacion ='/'){
+else if(operacion = "/"){
     if(numero2 == 0){
         return "No se puede dividir por 0"
     }else{
@@ -33,17 +33,27 @@ function mostrarResultado(resultado) {
 
 
 function atenderOperacion() {
-    numero1 = pedirNumero();
-    operacion = prompt(" Presione * para multplicar  Presione + para sumar Presione - para restar Presione / para dividir o C para salir Opcion : ");
-    numero2 = pedirNumero();
-    calcula = calcular(numero1, operacion,numero2);
-    muestra = mostrarResultado(calcula)
+    let numero1 = pedirNumero();
+    let operacion = prompt(" Presione * para multplicar  Presione + para sumar Presione - para restar Presione / para dividir: ");
+    let numero2 = pedirNumero();
+    let calcula =calcular(numero1, operacion,numero2);
+     mostrarResultado(calcula)
 }
 
 let activo = true;
+let atender;
 
-while (activo == true){
-atenderOperacion();
+
+while (activo == true) {
+    
+const pregunta = prompt(" Desea realizar otra operacion?: S/N -> ");
+
+    if(pregunta == "S" || pregunta == "s"){
+        atender = atenderOperacion();
+        continue;
+    }else if(pregunta == "N" || pregunta == "n"){
+        activo = false;
+    }
 
 }
 console.log(" Sesión cerrada correctamente ✔. Te esperamos muy pronto");
